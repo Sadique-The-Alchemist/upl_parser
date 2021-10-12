@@ -16,7 +16,7 @@ defmodule UplParserWeb.ParserControllerTest do
   describe "parse/2" do
     test "parser will parse given tag from the html" do
       conn = build_conn()
-      conn = get(conn, Routes.parser_path(conn, :parse, url: @html, tag: "img"))
+      conn = get(conn, Routes.parser_path(conn, :parse, url: @html, tag: "a"))
     end
   end
 end

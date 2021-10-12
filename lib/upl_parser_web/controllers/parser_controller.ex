@@ -2,8 +2,8 @@ defmodule UplParserWeb.ParserController do
   use UplParserWeb, :controller
   alias UplParser.Parser
 
-  def parse(conn, %{"url" => url, "tag" => tag}) do
-    Parser.parse(url, tag)
-    conn
+  def images(conn, %{"url" => url}) do
+    list = Parser.parse_image(url)
+    render(conn, "parser.json", list: list)
   end
 end
