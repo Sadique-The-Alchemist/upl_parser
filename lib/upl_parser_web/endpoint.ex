@@ -24,7 +24,7 @@ defmodule UplParserWeb.Endpoint do
     at: "/",
     from: :upl_parser,
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(css fonts images js favicon.ico robots.txt test.html)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

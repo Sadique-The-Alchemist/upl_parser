@@ -29,7 +29,10 @@ defmodule UplParser.Parser do
   * attribute - attribute for url
   """
   def parse(url, tag, attribute) do
-    {:ok, document} = Floki.parse_document(url)
+    {:ok, html} = HTTPoison.get(url)
+
+    {:ok, document} = Floki.parse_document(html.body)
+
     document |> Floki.find(tag) |> Floki.attribute(attribute)
   end
 end
