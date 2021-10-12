@@ -10,14 +10,14 @@ defmodule UplParser.Parser do
   @doc """
   Pars urls of image from given html
   """
-  def parse_image(url) do
+  def parse_images(url) do
     parse(url, @image, @image_attr)
   end
 
   @doc """
   Parse urls of link from given html
   """
-  def parse_link(url) do
+  def parse_links(url) do
     parse(url, @link, @link_attr)
   end
 

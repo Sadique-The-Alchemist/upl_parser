@@ -7,7 +7,8 @@ defmodule UplParserWeb.Router do
 
   scope "/api", UplParserWeb do
     pipe_through :api
-    get "/parse", ParserController, :parse
+    get "/images", ParserController, :images
+    get "/links", ParserController, :links
   end
 
   # Enables LiveDashboard only for development
